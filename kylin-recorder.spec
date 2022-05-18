@@ -1,9 +1,9 @@
 %define debug_package %{nil}
 Name:           kylin-recorder
 Version:        1.2.23
-Release:        2
+Release:        3
 Summary:        kylin-recorder
-License:        GPL-3.0 License
+License:        GPL-3.0-or-later
 URL:            https://github.com/UbuntuKylin/kylin-recorder
 Source0:        %{name}-%{version}.tar.gz
 patch0:         0001-modify-kylin-recorder-running-errors.patch
@@ -68,6 +68,9 @@ popd
 %{_datadir}/kylin-recorder/translations/*
 
 %changelog
+* Wed May 18 2022 tanyulong<tanyulong@kylinos.cn> - 1.2.23-3
+- Improve the project according to the requirements of compliance improvement
+
 * Tue Sep 14 2021 douyan <douyan@kylinos.cn> - 1.2.23-2
 - fix title bar issue
 
