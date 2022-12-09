@@ -1,13 +1,11 @@
 %define debug_package %{nil}
 Name:           kylin-recorder
-Version:        1.2.23
-Release:        3
+Version:        1.3.0
+Release:        1
 Summary:        kylin-recorder
 License:        GPL-3.0-or-later
 URL:            https://github.com/UbuntuKylin/kylin-recorder
 Source0:        %{name}-%{version}.tar.gz
-patch0:         0001-modify-kylin-recorder-running-errors.patch
-patch1:         fix_title_bar_issue.patch
 
 BuildRequires: qt5-qtbase-devel
 BuildRequires: qt5-qtscript-devel
@@ -42,8 +40,6 @@ kylin-recording
 %prep
 
 %setup -q
-%patch0 -p1
-%patch1 -p1
 %build
 
 export PATH=%{_qt5_bindir}:$PATH
@@ -68,6 +64,9 @@ popd
 %{_datadir}/kylin-recorder/translations/*
 
 %changelog
+* Mon Oct 24 2022 tanyulong<tanyulong@kylinos.cn> - 1.3.0-1
+- update upstream version 1.3.0
+
 * Wed May 18 2022 tanyulong<tanyulong@kylinos.cn> - 1.2.23-3
 - Improve the project according to the requirements of compliance improvement
 
