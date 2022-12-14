@@ -1,7 +1,6 @@
-%define debug_package %{nil}
 Name:           kylin-recorder
 Version:        1.2.23
-Release:        3
+Release:        4
 Summary:        kylin-recorder
 License:        GPL-3.0-or-later
 URL:            https://github.com/UbuntuKylin/kylin-recorder
@@ -68,6 +67,9 @@ popd
 %{_datadir}/kylin-recorder/translations/*
 
 %changelog
+* Thu Dec 08 2022 fushanqing <fushanqing@kylinos.cn> - 1.2.23-4
+- Enable debuginfo for fix strip
+
 * Wed May 18 2022 tanyulong<tanyulong@kylinos.cn> - 1.2.23-3
 - Improve the project according to the requirements of compliance improvement
 
