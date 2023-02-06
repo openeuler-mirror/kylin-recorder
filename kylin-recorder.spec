@@ -1,7 +1,6 @@
-%define debug_package %{nil}
 Name:           kylin-recorder
 Version:        1.3.0
-Release:        1
+Release:        2
 Summary:        kylin-recorder
 License:        GPL-3.0-or-later
 URL:            https://github.com/UbuntuKylin/kylin-recorder
@@ -38,8 +37,8 @@ Requires: gstreamer1-plugins-good
 kylin-recording
 
 %prep
-
 %setup -q
+
 %build
 
 export PATH=%{_qt5_bindir}:$PATH
@@ -64,6 +63,9 @@ popd
 %{_datadir}/kylin-recorder/translations/*
 
 %changelog
+* Mon Feb 06 2023 peijiankang <peijiankang@kylinos.cn> - 1.3.0-2
+- add build debuginfo and debugsource
+
 * Mon Oct 24 2022 tanyulong<tanyulong@kylinos.cn> - 1.3.0-1
 - update upstream version 1.3.0
 
