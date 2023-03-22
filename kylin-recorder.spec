@@ -1,6 +1,6 @@
 Name:           kylin-recorder
 Version:        1.3.0
-Release:        3
+Release:        4
 Summary:        kylin-recorder
 License:        GPL-3.0-or-later
 URL:            https://github.com/UbuntuKylin/kylin-recorder
@@ -66,6 +66,9 @@ popd
 %{_datadir}/kylin-user-guide/data/guide/kylin-recorder
 
 %changelog
+* Wed Mar 22 2023 peijiankang <peijiankang@kylinos.cn> - 1.3.0-4
+- fix user-guide for kylin-recorder in English
+
 * Mon Mar 06 2023 peijiankang <peijiankang@kylinos.cn> - 1.3.0-3
 - add user-guide for kylin-recorder
 
