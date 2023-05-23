@@ -1,0 +1,29 @@
+From c048f5c63360fb0070068543c57537d3aaa83cb0 Mon Sep 17 00:00:00 2001
+From: peijiankang <peijiankang@kylinos.cn>
+Date: Mon, 6 Mar 2023 15:50:33 +0800
+Subject: [PATCH] add user-guide for kylin-recorder
+
+---
+ kylin-recorder.pro | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+diff --git a/kylin-recorder.pro b/kylin-recorder.pro
+index 558eee9..a63ff9d 100644
+--- a/kylin-recorder.pro
++++ b/kylin-recorder.pro
+@@ -56,9 +56,11 @@ schemes.path = /usr/share/glib-2.0/schemas/
+ 
+ # LIBS += -L/usr/lib/libukui-log4qt.so.1.0.0 -lukui-log4qt
+ 
++guide.files += $$PWD/data/kylin-recorder
++guide.path = /usr/share/kylin-user-guide/data/guide/
+ 
+ 
+-INSTALLS += target desktop appdesktop icons  schemes qm_files
++INSTALLS += target desktop appdesktop icons  schemes qm_files guide
+ 
+ # The following define makes your compiler emit warnings if you use
+ # any feature of Qt which as been marked as deprecated (the exact warnings
+-- 
+2.33.0
+
