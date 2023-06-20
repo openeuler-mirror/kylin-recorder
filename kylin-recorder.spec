@@ -1,11 +1,12 @@
 Name:           kylin-recorder
 Version:        1.3.0
-Release:        4
+Release:        5
 Summary:        kylin-recorder
 License:        GPL-3.0-or-later
 URL:            https://github.com/UbuntuKylin/kylin-recorder
 Source0:        %{name}-%{version}.tar.gz
 Patch01:        0001-add-user-guide-for-kylin-recorder.patch
+Patch02:        0002-fix-clang.patch
 
 BuildRequires: qt5-qtbase-devel
 BuildRequires: qt5-qtscript-devel
@@ -38,8 +39,7 @@ Requires: gstreamer1-plugins-good
 kylin-recording
 
 %prep
-%setup -q
-%patch01 -p1
+%autosetup -p1
 
 %build
 
@@ -66,6 +66,9 @@ popd
 %{_datadir}/kylin-user-guide/data/guide/kylin-recorder
 
 %changelog
+* Tue Jun 20 2023 yoo <sunyuechi@iscas.ac.cn> - 1.3.0-5
+- fix clang build error
+
 * Wed Mar 22 2023 peijiankang <peijiankang@kylinos.cn> - 1.3.0-4
 - fix user-guide for kylin-recorder in English
 
